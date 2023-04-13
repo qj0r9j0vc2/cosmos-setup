@@ -1,6 +1,7 @@
 - name: Transfer and execute a script.
   hosts: all
   tasks:
-
-     - name: Copy and Execute the script 
-       script: ../cosmos-setup.sh
+    - name: Copy and execute the script
+      script: ../cosmos-setup.sh
+      args:
+        executable: /bin/bash -c "source ../cosmos-setup.sh"
