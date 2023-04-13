@@ -1,7 +1,11 @@
 - name: Transfer and execute a script.
   hosts: all
   tasks:
-    - name: Copy and execute the script
-      script: ../cosmos-setup.sh
-      args:
-        executable: /bin/bash -c "source ../cosmos-setup.sh"
+    - name: Copy the script to remote host
+      copy:
+        src: ../cosmos-setup.sh
+        dest: /tmp/cosmos-setup.sh
+        mode: "u=rwx,g=rx,o=rx"
+    - name: Execute the script on remote host
+      become: true
+      shell: . /tmp/cosmos-setup.sh
