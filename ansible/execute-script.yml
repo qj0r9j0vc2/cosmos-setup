@@ -1,5 +1,7 @@
 - name: Transfer and execute a script.
   hosts: all
+  vars:
+    persistent_connection: true
   tasks:
     - name: Copy the script to remote host
       copy:

@@ -14,4 +14,3 @@ resource "null_resource" "run_ansible" {
     command = "ANSIBLE_HOST_KEY_CHECKING=False ansible-playbook -u ubuntu -i '${aws_instance.example-ec2.public_ip},' --private-key ~/.ssh/id_rsa -e 'pub_key=~/.ssh/id_rsa.pub' ../ansible/execute-script.yml"
   }
 }
-
