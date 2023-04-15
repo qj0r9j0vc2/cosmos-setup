@@ -98,3 +98,37 @@ resource "aws_default_security_group" "default" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 }
+
+#SecurityGroup for Simapp
+resource "aws_security_group" "exampmle-sg-simapp" {
+  vpc_id = aws_vpc.example-vpc.id
+
+//  ingress {
+//    protocol = "tcp"
+//    from_port = 9090
+//    to_port = 9090
+//    cidr_blocks = ["0.0.0.0/0"]
+//  }
+//
+//  ingress {
+//    protocol = "tcp"
+//    from_port = 26656
+//    to_port = 26656
+//    cidr_blocks = ["0.0.0.0/0"]
+//  }
+//
+//  ingress {
+//    protocol = "tcp"
+//    from_port = 1317
+//    to_port = 1317
+//    cidr_blocks = ["0.0.0.0/0"]
+//  }
+
+  ingress {
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+}

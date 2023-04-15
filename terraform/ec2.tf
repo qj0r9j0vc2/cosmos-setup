@@ -9,7 +9,8 @@ resource "aws_instance" "example-ec2" {
   subnet_id = aws_subnet.example-subnet-publicA.id
   security_groups = [
     aws_security_group.example-sg-ssh.id,
-    aws_default_security_group.default.id
+    aws_default_security_group.default.id,
+    aws_security_group.exampmle-sg-simapp.id
   ]
   key_name = "example-key-pair"
   associate_public_ip_address = true
@@ -17,5 +18,5 @@ resource "aws_instance" "example-ec2" {
   tags = {
     Name = "example-ec2"
   }
-  
+
 }
