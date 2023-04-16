@@ -5,7 +5,7 @@
   tasks:
     - name: Copy the script to remote host
       copy:
-        src: ../cosmos-setup.sh
+        src: ../scripts/cosmos-setup.sh
         dest: /tmp/cosmos-setup.sh
         mode: "u=rwx,g=rx,o=rx"
     - name: Execute the script on remote host
