@@ -1,4 +1,4 @@
-# Prestarting
+# Before starting
  This branch has written only for single node on cosmos blockchain.
  If you want to run multiple cosmos blockchain nodes, try main branch script.
 
