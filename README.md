@@ -1,3 +1,7 @@
+# Prestarting
+ This branch has written only for single node on cosmos blockchain.
+ If you want to run multiple cosmos blockchain nodes, try main branch script.
+
 # Cosmos-setup
  script for cosmosSDK simapp setup with Terraform, Ansible
 
